@@ -19,10 +19,12 @@ app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
 
+const conn =
+  process.env.DB_URL ||
+  'mongodb+srv://kyletseng:kI0uFSqRT6tcxso2@recipe-app-cluster.y73y5j2.mongodb.net/Recipe?retryWrites=true&w=majority&appName=recipe-app-cluster';
+
 mongoose
-  .connect(
-    'mongodb+srv://kyletseng:kI0uFSqRT6tcxso2@recipe-app-cluster.y73y5j2.mongodb.net/Recipe?retryWrites=true&w=majority&appName=recipe-app-cluster'
-  )
+  .connect(conn)
   .then(() => {
     console.log('Successfully connect to MongoDB');
 

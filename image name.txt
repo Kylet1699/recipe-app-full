@@ -1,0 +1,4 @@
+client: kylet1699/recipe-app-client
+server: kylet1699/recipe-app-server
+
+db: mongo
